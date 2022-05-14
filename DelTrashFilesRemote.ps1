@@ -1,33 +1,27 @@
 ﻿<#
 .SYNOPSIS
-  Clear remote disks and copy comments for bpm tickets
+  Clear remote disks and copy comments for tickets
 .DESCRIPTION
-  Clear remote disks and copy comments for bpm ticketsn
+  Clear remote disks and copy comments for ticketsn
 .EXAMPLE
-  Скопировать-вставить путь для запуска в отдельном окне:
-  \\t2ru\folders\IT-Outsource\Scripts\PowerShell\PC\DelTrashFilesRemoteV0.16.ps1
+
 .INPUTS
   PC or IP
 .OUTPUTS
-  text to clipboard for bpm comments
+  text to clipboard for comments
 .NOTES
-  for all questions:
-  denis.tirsikh@tele2.ru
 #>
 
   [Environment]::NewLine
-# !!! РАБОТАЕТ ТОЛЬКО ТАКАЯ ВАРИАЦИЯ, КОГДА $Null В конце:
 # $ErrAct1, $ErrAct2, $ErrDelHyb = $null
 
-
-#
 # Логирование:
 # $dl = Get-Date -Format "dd.MM HH.mm.ss"
   $dl = Get-Date -Format "dd.MM_HH.mm.ss"
 # $dl
 
-# $PSScriptRoot   # текущая директория, из которой был запущен скрипт
-# $PSCommandPath  #  полный путь и имя файла скрипта
+# $PSScriptRoot                 # текущая директория, из которой был запущен скрипт
+# $PSCommandPath                #  полный путь и имя файла скрипта
 # $MyInvocation.MyCommand.Path  # содержит полный путь и имя скрипта
 # $MyInvocation.MyCommand.Name  # имя файла
   $ScriptName= $MyInvocation.MyCommand.Name   # имя скрипта, из которого запущена команда
